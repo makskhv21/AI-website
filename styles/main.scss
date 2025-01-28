@@ -1,0 +1,13 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+body {
+  background-color: green;
+
+  p {
+    color: red;
+  }
+}

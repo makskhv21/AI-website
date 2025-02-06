@@ -449,6 +449,31 @@ button[aria-label]::before {
   content: "";
 }
 
+.icon {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.625rem;
+}
+.icon::after {
+  --size: 1.5rem;
+  width: var(--size);
+  height: var(--size);
+  content: "";
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.icon--yellow-arrow::after {
+  background-image: url("../../images/Icon.svg");
+}
+
+.header__promo {
+  padding-block: 1.25rem;
+  text-align: center;
+  border-bottom: var(--border);
+}
+
 body {
   background-color: green;
 }

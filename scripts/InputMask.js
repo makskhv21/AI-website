@@ -1,34 +1,34 @@
-const rootSelector = '[data-js-input-mask]'
+const rootSelector = '[data-js-input-mask]';
 
 class InputMask {
   constructor(rootElement) {
-    this.rootElement = rootElement
-    this.init()
+    this.rootElement = rootElement;
+    this.init();
   }
 
   init() {
-    const isLibReady = typeof window.IMask !== 'undefined'
+    const isLibReady = typeof window.IMask !== 'undefined';
 
     if (isLibReady) {
       window.IMask(this.rootElement, {
-        mask: this.rootElement.dataset.jsInputMask
-      })
+        mask: this.rootElement.dataset.jsInputMask,
+      });
     } else {
-      console.error('Бібліотека "imask" не підключена!')
+      console.error('Бібліотека "imask" не підключена!');
     }
   }
 }
 
 class InputMaskCollection {
   constructor() {
-    this.init()
+    this.init();
   }
 
   init() {
     document.querySelectorAll(rootSelector).forEach((element) => {
-      new InputMask(element)
-    })
+      new InputMask(element);
+    });
   }
 }
 
-export default InputMaskCollection
+export default InputMaskCollection;
